@@ -1,0 +1,22 @@
+{   
+    "metadata": {
+        "title": "ssg_i18n_next",
+        "description": "Next.js 14 Starter SSG project with client-side locale detection and internationalization with next-intl."
+    },
+    "mainPage": {
+        "labels": {
+            "title": "Main Page",
+            "subtitle": "You're in the main page",
+            "content": "This is a placeholder paragraph meant to provide a visual representation of typography and layout without distracting with meaningful content. The content within this paragraph should be replaced with actual information relevant to the website's purpose and functionality. This text is simply dummy content used for design and layout purposes. It serves as a temporary stand-in until the actual content is available. Placeholder text helps designers and developers visualize how text will appear within a design or template. Feel free to replace this with your own meaningful content.",
+            "goSubPage": "Go to Subpage"
+        }
+    },
+    "subPage": {
+        "labels": {
+            "title": "Subpage",
+            "subtitle": "You're in the subpage",
+            "content": "This is another placeholder paragraph. The content within this paragraph should be replaced with actual information relevant to the website's purpose and functionality. Since this is a different page, this placeholder text is slightly different from the main page one. By having a different placholder text, one can clearly see when the text changes while navigating between similarly looking pages.",
+            "goMainPage": "Go back to Main Page"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{   
+    "metadata": {
+        "title": "ssg_i18n_next",
+        "description": "Projeto Next.js SSG com detecção automática de idioma preferido e internacionalização com next-intl."
+    },
+    "mainPage": {
+        "title": "Página Principal",
+        "description": "Página Principal",
+        "labels": {
+            "title": "Página Principal",
+            "subtitle": "Você está na página principal",
+            "content": "Este é um parágrafo temporário destinado a fornecer uma representação visual da tipografia e do layout sem distrair com conteúdo significativo. O conteúdo dentro deste parágrafo deve ser substituído por informações reais relevantes para o propósito e a funcionalidade do site. Este texto é simplesmente um conteúdo fictício usado para fins de design e layout. Serve como um substituto temporário até que o conteúdo real esteja disponível. Textos temporários servem para auxiliar designers e desenvolvedores a visualizar como o texto aparecerá dentro de um design ou modelo. Sinta-se à vontade para substituir este conteúdo pelo seu próprio conteúdo significativo.",
+            "goSubPage": "Ir para a subpágina"
+        }
+    },
+    "subPage": {
+        "title": "Subpágina",
+        "description": "Subpágina",
+        "labels": {
+            "title": "Subpágina",
+            "subtitle": "Você está na subpágina",
+            "content": "Este é outro parágrafo temporário. O conteúdo dentro deste parágrafo deve ser substituído por informações reais relevantes para o propósito e a funcionalidade do site. Como essa é uma página diferente, este parágrafo temporário é ligeiramente diferente em comparação com o parágrafo da página principal. Ao utilizar um texto temporário diferente, é possível perceber quando o texto muda ao navegar por páginas de visual semelhante.",
+            "goMainPage": "Voltar para a página principal"
+        }
+    }
+}

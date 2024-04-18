@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-white bg-gray-900 m-0 box-border;
+}
+
+/* Prettier browser scrollbars */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar {
+  right: 0;
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-black/25;
+  border-radius: 12px;
+  width: 12px;
+  height: 12px;
+}
