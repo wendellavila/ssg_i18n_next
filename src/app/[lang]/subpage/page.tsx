@@ -2,7 +2,7 @@ import { Content,RouterButton } from '@/components/client';
 
 export default function SubPage(){
   return(
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center justify-evenly grow">
       <Content id="content" pageName="subPage"/>
       <RouterButton
         route=""

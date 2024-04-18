@@ -19,9 +19,7 @@ export default async function InternationalizedLayout({
         <ClientProviderLoader lang={lang} messages={messages}>
           <div className="min-h-screen flex flex-col">
             <Header/>
-            <div className="grow">
-              {children}
-            </div>
+            {children}
             <LanguageSelector/>
           </div>
         </ClientProviderLoader>
