@@ -10,7 +10,7 @@ export default function Content(props: ContentProps){
         <h1 className="text-3xl mb-1 text-center" id={`${props.id ? props.id+'-' : ''}title`}>
           {i18n('title')}
         </h1>
-        <h2 className="text-md mb-6 text-center text-gray-100" id={`${props.id ? props.id+'-' : ''}subtitle`}>
+        <h2 className="text-md mb-10 text-center text-gray-100" id={`${props.id ? props.id+'-' : ''}subtitle`}>
           {i18n('subtitle')}
         </h2>
         <p className="text-md text-justify text-gray-200" id={`${props.id ? props.id+'-' : ''}content`}>
