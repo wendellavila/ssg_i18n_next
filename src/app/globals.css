@@ -6,18 +6,10 @@ body {
   @apply text-white bg-gray-900 m-0 box-border;
 }
 
-/* Prettier browser scrollbars */
-::-webkit-scrollbar-track {
-  background-color: transparent;
-}
 ::-webkit-scrollbar {
-  right: 0;
-  width: 6px;
-  height: 6px;
+  @apply bg-slate-700 w-[8px] h-[8px];
 }
+
 ::-webkit-scrollbar-thumb {
-  @apply bg-black/25;
-  border-radius: 12px;
-  width: 12px;
-  height: 12px;
+  @apply bg-slate-500 rounded hover:bg-slate-400;
 }
