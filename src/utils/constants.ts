@@ -1,9 +1,7 @@
 import { Archivo } from 'next/font/google';
 
 const isProduction = process.env.NODE_ENV === 'production';
-export const basePath = isProduction
-  ? process.env.NEXT_PUBLIC_BASE_PATH
-  : undefined;
+export const basePath = isProduction ? '/projects/ssg_i18n_next' : '';
 
 export const archivo = Archivo({
   subsets: ['latin'],
