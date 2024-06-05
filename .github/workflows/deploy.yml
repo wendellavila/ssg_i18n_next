@@ -50,6 +50,7 @@ jobs:
             mkdir deploy_repo/projects/ssg_i18n_next
           fi
           cp -r ${{ env.build_dir }}/. deploy_repo/projects/ssg_i18n_next
+          touch deploy_repo/projects/ssg_i18n_next/.nojekyll
       - name: Commit files to deployment repo
         run: |
           cd deploy_repo
