@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 
+const isProduction = process.env.NODE_ENV === 'production';
+const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH : undefined;
+
 const nextConfig = {
     trailingSlash: true,
     output: 'export',
