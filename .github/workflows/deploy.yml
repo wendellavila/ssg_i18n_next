@@ -41,16 +41,16 @@ jobs:
 
       - name: Delete old files and move new build to deployment repo folder
         run: |
-          if [ -d deploy_repo/projects/ssg_i18n_next ] ; then
-            rm -rf deploy_repo/projects/ssg_i18n_next/*
+          if [ -d deploy_repo/projects/${{ env.source_repo }} ] ; then
+            rm -rf deploy_repo/projects/${{ env.source_repo }}/*
           else
             if [ ! -d deploy_repo/projects ] ; then
               mkdir deploy_repo/projects
             fi
-            mkdir deploy_repo/projects/ssg_i18n_next
+            mkdir deploy_repo/projects/${{ env.source_repo }}
           fi
-          cp -r ${{ env.build_dir }}/. deploy_repo/projects/ssg_i18n_next
-          touch deploy_repo/projects/ssg_i18n_next/.nojekyll
+          cp -r ${{ env.build_dir }}/. deploy_repo/projects/${{ env.source_repo }}
+          touch deploy_repo/projects/${{ env.source_repo }}/.nojekyll
       - name: Commit files to deployment repo
         run: |
           cd deploy_repo
