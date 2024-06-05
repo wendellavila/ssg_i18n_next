@@ -1,0 +1,58 @@
+name: GitHub Pages Deploy
+on:
+  push:
+    branches: [deploy]
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+    env:
+      API_GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
+      username: wendellavila
+      email: wendelljcavila@gmail.com
+      build_dir: out
+      source_repo: ssg_i18n_next
+      deploy_repo: wendellavila.github.io
+      deploy_branch: main
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Build Next.js project
+        run: npm run build
+
+      - name: Clone and checkout deployment repo
+        run: |
+          git clone "https://user:$API_GITHUB_TOKEN@github.com/$username/$deploy_repo" deploy_repo
+          cd deploy_repo
+          git config user.name "$username"
+          git config user.email "$email"
+          git checkout "$deploy_branch"
+          cd ..
+
+      - name: Delete old files and move new build to deployment repo folder
+        run: |
+          if [ -d deploy_repo/projects/ssg_i18n_next ] ; then
+            rm -rf deploy_repo/projects/ssg_i18n_next/*
+          else
+            if [ ! -d deploy_repo/projects ] ; then
+              mkdir deploy_repo/projects
+            fi
+            mkdir deploy_repo/projects/ssg_i18n_next
+          fi
+          cp -r ${{ env.build_dir }}/. deploy_repo/projects/ssg_i18n_next
+      - name: Commit files to deployment repo
+        run: |
+          cd deploy_repo
+          git add .
+          git commit -m "ci: Automated deployment with GitHub Actions. Source repo: $username/$source_repo"
+          git push origin main
