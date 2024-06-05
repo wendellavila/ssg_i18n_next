@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Iconify } from '@/components/client';
 import { ComponentProps } from '@/typing/props';
+import { basePath } from '@/utils/constants';
 
 interface LoadingScreenProps extends ComponentProps {
   imageSrc?: string;
@@ -18,7 +19,7 @@ export default function LoadingScreen(props: LoadingScreenProps) {
       <Image
         width={100}
         height={65}
-        src="/logo_dark.svg"
+        src={`${basePath}/logo_dark.svg`}
         alt="Logo"
         className="mb-10 w-auto h-[65px]"
         priority={true}
